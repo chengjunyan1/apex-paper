@@ -12,7 +12,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .skip-link:focus{top:12px}
 .site-header,main,footer{max-width:1200px;margin-inline:auto}
 .site-header{display:flex;align-items:center;justify-content:space-between;padding:25px 40px;border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:11px;font-size:18px;font-weight:600;letter-spacing:-.025em}
+.brand{display:flex;align-items:center;gap:11px;font-size:20px;font-weight:700;letter-spacing:.05em}
 .brand svg{width:30px;height:30px;stroke:var(--accent);stroke-width:1.4;fill:var(--paper)}
 .page-tabs{max-width:1120px;margin:0 auto;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:30px;font-size:12px}
 .page-tabs a{padding:13px 2px 11px;color:var(--muted);border-bottom:2px solid transparent}
