@@ -6,8 +6,8 @@
 
 .project-header{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:18px 25px;background:var(--bg);border-bottom:1px solid var(--border);flex-shrink:0}
 .project-header a{text-decoration:none;color:var(--text-h)}
-.project-brand{font-size:19px;font-weight:700;letter-spacing:.05em}.project-brand span{font-size:11px;font-weight:400;color:var(--muted);letter-spacing:0;margin-left:12px;padding-left:12px;border-left:1px solid var(--border)}
-.project-header nav{display:flex;gap:26px;font-size:12px}.project-header nav a{padding:6px 0;color:var(--muted);border-bottom:2px solid transparent}.project-header nav a[aria-current=page]{color:var(--text-h);border-bottom-color:var(--text-h);font-weight:600}
+.project-brand{font-size:19px;font-weight:700;letter-spacing:-.02em}.project-brand span{font-size:11px;font-weight:400;color:var(--muted);letter-spacing:0;margin-left:12px;padding-left:12px;border-left:1px solid var(--border)}
+.project-header nav{display:flex;gap:26px;font-size:12px}.project-header nav a{padding:6px 0;color:var(--muted);border-bottom:2px solid transparent}.project-header nav a[aria-current=page]{color:var(--text-h);border-bottom-color:var(--accent);font-weight:600}
 .paper-link{font-size:11px}.database-description{font-size:12px;color:var(--muted);margin:7px 0 0}
 .app-header{justify-content:space-between;align-items:center!important;padding:20px 25px!important;background:var(--bg)!important;flex-shrink:0}
 .app-header h1{font:30px/1.2 Georgia,'Times New Roman',serif!important;font-weight:400!important;letter-spacing:-.03em}
@@ -289,7 +289,7 @@ button:focus-visible,a:focus-visible,th:focus-visible,tr:focus-visible{outline:2
 }
 .design-table td code {
   font-size: 0.8rem;
-  color: var(--teal);
+  color: var(--code-accent);
 }
 .arrow {
   color: var(--accent);
@@ -327,7 +327,7 @@ button:focus-visible,a:focus-visible,th:focus-visible,tr:focus-visible{outline:2
   position: fixed;
   inset: 0;
   z-index: 50;
-  background: rgba(20, 16, 40, 0.5);
+  background: rgba(41, 37, 31, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -379,7 +379,7 @@ button:focus-visible,a:focus-visible,th:focus-visible,tr:focus-visible{outline:2
 }
 .chip-sha {
   font-size: 0.74rem;
-  color: var(--teal);
+  color: var(--code-accent);
   word-break: break-all;
 }
 .modal-close {
@@ -488,3 +488,11 @@ button:focus-visible,a:focus-visible,th:focus-visible,tr:focus-visible{outline:2
 
 .mobile-filter-toggle{display:none}
 @media(max-width:680px){.mobile-filter-toggle{display:block;text-align:left;border:0;border-bottom:1px solid var(--border);background:var(--panel);color:var(--text-h);padding:10px 16px;font-size:12px;flex-shrink:0}.layout{grid-template-columns:1fr!important}.filters{display:none;border-right:0;border-bottom:1px solid var(--border);max-height:42vh}.layout.filters-open{grid-template-rows:auto minmax(0,1fr)}.filters-open .filters{display:block}.modal{width:96vw!important;max-height:94vh!important}.modal-meta{max-height:120px;overflow:auto}}
+
+/* Warm syntax colors retain readable token distinctions within the paper palette. */
+.code-scroll .hljs-keyword, .code-scroll .hljs-selector-tag { color: #9b3f17; }
+.code-scroll .hljs-title, .code-scroll .hljs-title.function_, .code-scroll .hljs-title.class_ { color: #7d4a36; }
+.code-scroll .hljs-attr, .code-scroll .hljs-variable, .code-scroll .hljs-number, .code-scroll .hljs-literal { color: #a05217; }
+.code-scroll .hljs-string, .code-scroll .hljs-doctag, .code-scroll .hljs-regexp { color: #536349; }
+.code-scroll .hljs-built_in, .code-scroll .hljs-type { color: #745162; }
+.code-scroll .hljs-comment { color: #807669; }

@@ -1,4 +1,4 @@
-# APEX paper website
+# Mining the Design Space of Multi-Agent Workflows
 
 [Paper and interactive examples](https://junyan.ch/apex-paper/) · [Workflow database](https://junyan.ch/apex-paper/explorer/) · [Research code](https://github.com/xcadet/apex)
 

@@ -127,7 +127,7 @@ function App() {
 
   const projectHeader = (
     <div className="project-header">
-      <a href="../" className="project-brand">APEX <span>Research</span></a>
+      <a href="../" className="project-brand">Workflow Design</a>
       <nav aria-label="Project views"><a href="../">Paper</a><a href="./" aria-current="page">Database</a></nav>
       <a href="../assets/paper.pdf" className="paper-link">Read the paper ↗</a>
     </div>

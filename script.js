@@ -115,14 +115,14 @@ if (explorer) {
     graph.append(el("desc", {id:"graph-description"}, operatorInfo[operator][1]));
     const defs = el("defs");
     const marker = el("marker", {id:"arrow", viewBox:"0 0 10 10", refX:9, refY:5, markerWidth:5, markerHeight:5, orient:"auto-start-reverse"});
-    marker.append(el("path", {d:"M 0 0 L 10 5 L 0 10 z", fill:"#9baeb8"})); defs.append(marker); graph.append(defs);
+    marker.append(el("path", {d:"M 0 0 L 10 5 L 0 10 z", fill:"#b3a38e"})); defs.append(marker); graph.append(defs);
     const active = new Set(step < 0 ? [] : stages[step].ids);
     const map = new Map(nodes.map(n=>[n.id,n]));
     for (const [from,to] of edges) {
       const a = map.get(from), b = map.get(to);
       const dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy);
       graph.append(el("line", {x1:a.x+dx/len*21,y1:a.y+dy/len*21,x2:b.x-dx/len*24,y2:b.y-dy/len*24,
-        stroke:active.has(to)?"#a44b34":"#bdcbd1","stroke-width":active.has(to)?1.8:1,
+        stroke:active.has(to)?"#b45309":"#d4c8b7","stroke-width":active.has(to)?1.8:1,
         "marker-end":"url(#arrow)",opacity:operator==="moderator"?.65:1}));
     }
     const labels = new Set();
@@ -133,8 +133,8 @@ if (explorer) {
         labels.add(labelKey);
       }
       const g = el("g", {class:active.has(n.id)?"graph-node is-active":"graph-node"});
-      const fill = n.kind==="hub"?"#f0ebf4":"#edf2f5";
-      const stroke = active.has(n.id)?"#a44b34":n.kind==="hub"?"#8a749b":"#66889b";
+      const fill = n.kind==="hub"?"#f7e8d5":"#f3efe8";
+      const stroke = active.has(n.id)?"#b45309":n.kind==="hub"?"#9a5e2b":"#9b8a74";
       if (n.kind==="hub") g.append(el("rect",{x:n.x-21,y:n.y-21,width:42,height:42,rx:7,fill,stroke,"stroke-width":active.has(n.id)?2.6:1.4}));
       else g.append(el("circle",{cx:n.x,cy:n.y,r:21,fill,stroke,"stroke-width":active.has(n.id)?2.6:1.4}));
       g.append(el("text",{x:n.x,y:n.y+4,"text-anchor":"middle",class:"graph-node-label"},n.label));
