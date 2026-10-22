@@ -10,4 +10,4 @@ GitHub Pages publishes the root of the default branch. The project inherits
 the junyan.ch domain from the account's main Pages site. Do not add a CNAME.
 
 The downloadable preprint and arXiv source package are in assets/.
-An arXiv identifier will be added after submission.
+An arXiv identifier and citation will be added after announcement.

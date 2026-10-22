@@ -1,26 +1,3 @@
-const copyButton = document.querySelector("#copy-citation");
-const citation = document.querySelector("#bibtex");
-const status = document.querySelector("#copy-status");
-
-if (copyButton && citation && navigator.clipboard?.writeText) {
-  copyButton.hidden = false;
-  copyButton.addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(citation.textContent.trim());
-      status.textContent = "BibTeX copied to clipboard.";
-      copyButton.firstChild.textContent = "Copied ";
-    } catch {
-      const selection = window.getSelection();
-      const range = document.createRange();
-      range.selectNodeContents(citation);
-      selection.removeAllRanges();
-      selection.addRange(range);
-      status.textContent = "Citation selected. Use your browser’s Copy command.";
-    }
-  });
-}
-
-
 // These examples illustrate operator semantics; they do not run models or predict scores.
 const operatorInfo = {
   star: ["Star", "Workers solve independently. A single aggregator sees their outputs and synthesizes the final answer. Workers do not see each other’s proposals."],
