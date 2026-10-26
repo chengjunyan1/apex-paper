@@ -129,7 +129,7 @@ function App() {
     <div className="project-header">
       <a href="../" className="project-brand">APEX</a>
       <nav aria-label="Project views"><a href="../">Paper</a><a href="./" aria-current="page">Database</a></nav>
-      <a href="../assets/paper.pdf" className="paper-link">Read the paper ↗</a>
+      <a href="https://arxiv.org/abs/2610.31709" className="paper-link">Read the paper ↗</a>
     </div>
   )
 
